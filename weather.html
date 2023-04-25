@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>FoodStory</title>
+        <link rel="icon" href="images/wave.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <script defer src="assets/js/weather.js"></script>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>Tydal</strong> <span>.io</span></a>
+						<nav>
+							<a href="index.html">Projects</a>
+							<a href="skills-about.html">Skills</a>
+							<a href="skills-about.html#contact">About</a>
+						</nav>
+
+						<nav>
+							<img src="images/wave.png" id = "waveLogo">
+						</nav>
+					</header>
+
+				<!-- Menu -->
+                    <nav id="menu">
+                        <ul class="links">
+                            <li><a href="#textSpeed">Text Speed</a></li>
+
+							<li>
+								<div class="switchBody">
+									<div class="switch">
+										<input name="switch" id="one" type="radio" onclick="setSpeed(10)"/>
+										<label for="one" class="switch__label"></label>
+										<input name="switch" id="two" type="radio" onclick="setSpeed(5)"/>
+										<label for="two" class="switch__label"></label>
+										<input name="switch" id="three" type="radio" checked onclick="setSpeed(-1)"/>
+										<label for="three" class="switch__label" ></label>
+										<div class="switch__indicator" /></div>
+									</div>
+								</div>
+							</li>
+                    </nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="gameBody">
+							<div class="gameBox">
+								<div>
+									Enter ZIP Code:
+									<input type="text" name="zip" id="zip"
+										   style =
+												   "-webkit-box-shadow: none;
+								-moz-box-shadow: none;
+								box-shadow: none;
+								background-color: white;
+								color: black;">
+									<div id="option-buttons" class="game-btn-grid">
+										<button class="btn" id="getWeather" onclick="getWeather()">Get Weather</button>
+										<button class="btn" id="clear" class="btn" onclick="clearBox()">Clear</button>
+									</div>
+								</div>
+								<div>
+								<textarea name="result" id="result" cols="15" rows="7" readonly="readonly"
+										  style =
+												  "resize: none;
+								border: none;
+								overflow: auto;
+								outline: none;
+
+								-webkit-box-shadow: none;
+								-moz-box-shadow: none;
+								box-shadow: none;"
+								></textarea>
+								</div>
+							</div>
+						</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+								<li><a href="https://github.com/tydaljames" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tyler-dalessandro/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Tydal.io</li></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

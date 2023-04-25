@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>FoodStory</title>
+        <link rel="icon" href="images/wave.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <script defer src="assets/js/foodstory.js"></script>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>Tydal</strong> <span>.io</span></a>
+						<nav>
+							<a href="index.html">Projects</a>
+							<a href="skills-about.html">Skills</a>
+							<a href="skills-about.html#contact">About</a>
+						</nav>
+
+						<nav>
+							<a href="#menu">Options</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+                    <nav id="menu">
+                        <ul class="links">
+                            <li><a href="#textSpeed">Text Speed</a></li>
+
+							<li>
+								<div class="switchBody">
+									<div class="switch">
+										<input name="switch" id="one" type="radio" onclick="setSpeed(10)"/>
+										<label for="one" class="switch__label"></label>
+										<input name="switch" id="two" type="radio" onclick="setSpeed(5)"/>
+										<label for="two" class="switch__label"></label>
+										<input name="switch" id="three" type="radio" checked onclick="setSpeed(-1)"/>
+										<label for="three" class="switch__label" ></label>
+										<div class="switch__indicator" /></div>
+									</div>
+								</div>
+							</li>
+                    </nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="gameBody">
+                            <div class="gameBox">
+                              <div id="text">Text</div>
+                              <div id="option-buttons" class="game-btn-grid">
+                                <button class="btn">Option 1</button>
+                                <button class="btn">Option 2</button>
+                                <button class="btn">Option 3</button>
+                                <button class="btn">Option 4</button>
+                              </div>
+                            </div>
+                        </div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+								<li><a href="https://github.com/tydaljames" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tyler-dalessandro/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Tydal.io</li></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
