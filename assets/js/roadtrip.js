@@ -1,5 +1,25 @@
 var string = "";
 
+
+function roadTrip() {
+    var startCity = document.getElementById("startCity").value;
+    var endCity = document.getElementById("endCity").value;
+    var apiUrl = "https://c062ryv3xe.execute-api.us-east-2.amazonaws.com/test/roadtrip?startCity=" + startCity + "&endCity=" + endCity;
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", apiUrl);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                document.getElementById("result").value = JSON.stringify(response, null, 2);
+            } else {
+                console.error("API call failed with status " + xhr.status);
+            }
+        }
+    };
+    xhr.send();
+}
+
 function getWeather(){
     clearBox();
     // let zip = document.getElementById("zip").value;
@@ -7,13 +27,20 @@ function getWeather(){
     let endCity = document.getElementById("endCity").value;
 
     // fetch('https://sfya6ero9d.execute-api.us-east-2.amazonaws.com/test/roadtrippath' + zip + ',us&units=imperial&APPID=6692a76e49a710aba20580d954009f87')
-    fetch('https://c062ryv3xe.execute-api.us-east-2.amazonaws.com/test/hellojava?startCity=' + startCity + '&endCity=' + endCity)
+    // fetch('https://c062ryv3xe.execute-api.us-east-2.amazonaws.com/test/hellojava?startCity=' + startCity + '&endCity=' + endCity)
+    fetch('https://c062ryv3xe.execute-api.us-east-2.amazonaws.com/test/hellopy')
     .then(response => response.json())
     .then(data => string = (JSON.stringify(data)))
-    .then(chop => chopString(startCity, endCity, string));
+    // .then(chop => chopString(startCity, endCity, string));
+    .then(chop => chopString(string));
+
 }
 
+
+
 function chopString(startCity, endCity, string){
+    alert('we made it')
+
     // let city = string.substring(string.indexOf("name") + 7, string.indexOf('\",\"cod'))
     // let temp = parseFloat(string.substring(string.indexOf("temp") + 6, string.indexOf("feels")));
     // let temp_min = parseFloat(string.substring(string.indexOf("temp_min") + 10, string.indexOf("temp_max")));
@@ -21,9 +48,8 @@ function chopString(startCity, endCity, string){
     // let feels_like = parseFloat(string.substring(string.indexOf("feels_like") + 12, string.indexOf("temp_min")));
     // let description = string.substring(string.indexOf("description") + 14, string.indexOf('\",\"icon'))
 
-    document.getElementById("result").innerHTML +=
-    string;
-
+    // document.getElementById("result").innerHTML =
+    // "Here's the result";
 
     // if(isNaN(temp) == false){
     //     // document.getElementById("result").innerHTML += city + ": " + temp + " ºF,  " + min + "\n";
