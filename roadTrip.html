@@ -2,11 +2,12 @@
 
 <html>
 	<head>
-		<title>Weather Forecast</title>
+		<title>FoodStory</title>
         <link rel="icon" href="images/wave.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <script defer src="assets/js/roadtrip.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -18,118 +19,79 @@
 					<header id="header" class="alt">
 						<a href="index.html" class="logo"><strong>Tydal</strong> <span>.io</span></a>
 						<nav>
-							<a href="#menu">Menu</a>
+							<a href="index.html">Projects</a>
+							<a href="skills-about.html">Skills</a>
+							<a href="skills-about.html#contact">About</a>
+						</nav>
+
+						<nav>
+							<img src="images/wave.png" id = "waveLogo">
 						</nav>
 					</header>
 
 				<!-- Menu -->
-				<nav id="menu">
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html#one">Projects</a></li>
-						<li><a href="index.html#four">Skills</a></li>
-						<li><a href="index.html#contact">About</a></li>
-					</ul>
-					<!-- <ul class="actions stacked">
-						<li><a href="#" class="button primary fit">Get Started</a></li>
-						<li><a href="#" class="button fit">Log In</a></li>
-					</ul> -->
-				</nav>
+                    <nav id="menu">
+                        <ul class="links">
+                            <li><a href="#textSpeed">Text Speed</a></li>
+
+							<li>
+								<div class="switchBody">
+									<div class="switch">
+										<input name="switch" id="one" type="radio" onclick="setSpeed(10)"/>
+										<label for="one" class="switch__label"></label>
+										<input name="switch" id="two" type="radio" onclick="setSpeed(5)"/>
+										<label for="two" class="switch__label"></label>
+										<input name="switch" id="three" type="radio" checked onclick="setSpeed(-1)"/>
+										<label for="three" class="switch__label" ></label>
+										<div class="switch__indicator" /></div>
+									</div>
+								</div>
+							</li>
+                    </nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="gameBody">
 							<div class="gameBox">
-							<div>
-								Enter ZIP Code: 
-								<input type="text" name="zip" id="zip" 
-								style = 
-								"-webkit-box-shadow: none;
+								<div>
+									Starting city:
+									<input type="text" name="startCity" id="startCity"
+										   style =
+												   "-webkit-box-shadow: none;
 								-moz-box-shadow: none;
 								box-shadow: none;
 								background-color: white;
 								color: black;">
-								<div id="option-buttons" class="game-btn-grid">
-									<button class="btn" id="getWeather" onclick="testGraph()">Get Weather</button>
-									<button class="btn" id="clear" class="btn" onclick="clearBox()">Clear</button>
 								</div>
-							</div>
-							<div>
-								<textarea name="result" id="result" cols="15" rows="7" readonly="readonly" 
-								style = 
-								"resize: none; 
+								<div>
+									Ending City:
+									<input type="text" name="endCity" id="endCity"
+										   style =
+												   "-webkit-box-shadow: none;
+								-moz-box-shadow: none;
+								box-shadow: none;
+								background-color: white;
+								color: black;">
+									<div id="option-buttons" class="game-btn-grid">
+										<button class="btn" id="getWeather" onclick="getWeather()">Find Shortest Path</button>
+										<button class="btn" id="clear" class="btn" onclick="clearBox()">Clear</button>
+									</div>
+								</div>
+								<div>
+								<textarea name="result" id="result" cols="15" rows="7" readonly="readonly"
+										  style =
+												  "resize: none;
 								border: none;
 								overflow: auto;
 								outline: none;
-				
+
 								-webkit-box-shadow: none;
 								-moz-box-shadow: none;
 								box-shadow: none;"
 								></textarea>
-							</div>  
+								</div>
 							</div>
 						</div>
-
-
-
-
-
-
-
-
-						
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">tydal@tydal.io</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -142,7 +104,7 @@
 								<li><a href="https://www.linkedin.com/in/tyler-dalessandro/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Tydal.io</li></li>
 							</ul>
 						</div>
 					</footer>
@@ -150,7 +112,6 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/roadTrip.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
