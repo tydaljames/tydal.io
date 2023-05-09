@@ -2,7 +2,7 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
-let speed = 5;
+let speed = -1;
 
 function setSpeed(setting) {
   speed = setting;
