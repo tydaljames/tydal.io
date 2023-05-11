@@ -2884,6 +2884,196 @@ input, select, textarea {
 			opacity: 0.25;
 		}
 
+/* UIUC MCS Course Tiles */
+
+.UIUC-MCS-Tiles {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	border-top: 0 !important;
+}
+
+.UIUC-MCS-Tiles + * {
+	border-top: 0 !important;
+}
+
+.UIUC-MCS-Tiles article {
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-transition: -moz-transform 0.25s ease, opacity 0.25s ease, -moz-filter 1s ease, -webkit-filter 1s ease;
+	-webkit-transition: -webkit-transform 0.25s ease, opacity 0.25s ease, -webkit-filter 1s ease, -webkit-filter 1s ease;
+	-ms-transition: -ms-transform 0.25s ease, opacity 0.25s ease, -ms-filter 1s ease, -webkit-filter 1s ease;
+	transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease, -webkit-filter 1s ease;
+	padding: 4em 4em 2em 4em ;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: default;
+	height: 95vh;
+	max-height: 95em;
+	min-height: 23em;
+	overflow: hidden;
+	position: relative;
+	width: 40%;
+}
+
+.UIUC-MCS-Tiles article .image {
+	display: none;
+}
+
+.UIUC-MCS-Tiles article header {
+	position: relative;
+	z-index: 3;
+}
+
+.UIUC-MCS-Tiles article h3 {
+	font-size: 1.75em;
+}
+
+.UIUC-MCS-Tiles article h3 a:hover {
+	color: inherit !important;
+}
+
+.UIUC-MCS-Tiles article .link.primary {
+	border: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.UIUC-MCS-Tiles article:before {
+	-moz-transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 0.85;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+.UIUC-MCS-Tiles article:after {
+	background-color: rgba(36, 41, 67, 0.25);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.UIUC-MCS-Tiles article:hover:before {
+	opacity: 0;
+}
+
+.UIUC-MCS-Tiles article.is-transitioning {
+	-moz-transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
+	-moz-filter: blur(0.5em);
+	-webkit-filter: blur(0.5em);
+	-ms-filter: blur(0.5em);
+	filter: blur(0.5em);
+	opacity: 0;
+}
+
+.UIUC-MCS-Tiles article:nth-child(4n - 1), .UIUC-MCS-Tiles article:nth-child(4n - 2) {
+	width: 60%;
+}
+
+.UIUC-MCS-Tiles article:nth-child(6n - 5):before {
+	background-color: #6fc3df;
+}
+
+.UIUC-MCS-Tiles article:nth-child(6n - 4):before {
+	background-color: #8d82c4;
+}
+
+.UIUC-MCS-Tiles article:nth-child(6n - 3):before {
+	background-color: #ec8d81;
+}
+
+.UIUC-MCS-Tiles article:nth-child(6n - 2):before {
+	background-color: #e7b788;
+}
+
+.UIUC-MCS-Tiles article:nth-child(6n - 1):before {
+	background-color: #8ea9e8;
+}
+
+.UIUC-MCS-Tiles article:nth-child(6n):before {
+	background-color: #87c5a4;
+}
+
+@media screen and (max-width: 1280px) {
+
+	.UIUC-MCS-Tiles article {
+		padding: 4em 3em 2em 3em ;
+		height: 30vh;
+		max-height: 30em;
+		min-height: 20em;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.UIUC-MCS-Tiles article {
+		width: 50% !important;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.UIUC-MCS-Tiles article {
+		padding: 3em 1.5em 1em 1.5em ;
+		height: 16em;
+		max-height: none;
+		min-height: 0;
+	}
+
+	.UIUC-MCS-Tiles article h3 {
+		font-size: 1.5em;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.UIUC-MCS-Tiles {
+		display: block;
+	}
+
+	.UIUC-MCS-Tiles article {
+		height: 20em;
+		width: 100% !important;
+	}
+
+}
+
 /* Tiles */
 
 	.tiles {

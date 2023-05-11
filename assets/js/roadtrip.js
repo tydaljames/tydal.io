@@ -8,7 +8,9 @@ function roadTrip() {
 
     var startCity = document.getElementById("startCity").value;
     var endCity = document.getElementById("endCity").value;
-    var apiUrl = "https://c062ryv3xe.execute-api.us-east-2.amazonaws.com/test/roadtrip?startCity=" + startCity + "&endCity=" + endCity;
+    var attractions = document.getElementById("attractions").value;
+
+    var apiUrl = "https://c062ryv3xe.execute-api.us-east-2.amazonaws.com/test/roadtrip?startCity=" + startCity + "&endCity=" + endCity + "&attractions=" + attractions;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", apiUrl);
     xhr.onreadystatechange = function() {
@@ -25,5 +27,5 @@ function roadTrip() {
 }
 
 function clearBox(){
-    document.getElementById("result").innerHTML = "";
+    document.getElementById("result").value = "";
 }
