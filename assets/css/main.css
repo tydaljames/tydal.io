@@ -2920,8 +2920,8 @@ input, select, textarea {
 	background-repeat: no-repeat;
 	background-size: cover;
 	cursor: default;
-	height: 50vh;
-	max-height: 40em;
+	height: 60vh;
+	max-height: 60em;
 	min-height: 40em;
 	overflow: hidden;
 	position: relative;
@@ -3031,8 +3031,8 @@ input, select, textarea {
 
 	.UIUC-MCS-Tiles article {
 		padding: 4em 3em 2em 3em ;
-		height: 50vh;
-		max-height: 50em;
+		height: 60vh;
+		max-height: 60em;
 		min-height: 50em;
 	}
 
@@ -3050,7 +3050,7 @@ input, select, textarea {
 
 	.UIUC-MCS-Tiles article {
 		padding: 3em 1.5em 1em 1.5em ;
-		height: 50em;
+		height: 60em;
 		max-height: none;
 		min-height: 0;
 	}
@@ -3068,7 +3068,7 @@ input, select, textarea {
 	}
 
 	.UIUC-MCS-Tiles article {
-		height: 50em;
+		height: 60em;
 		width: 100% !important;
 	}
 
