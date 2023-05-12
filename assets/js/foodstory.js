@@ -759,7 +759,7 @@ const textNodes = [
   {
     id: 33,
     text: "You tear into the Large pizza. Your stomach rumbles as you devour the beautiful circle of dough and grease.\n\n" +
-    "In just a few minutes, the entire thing is gone"
+    "In just a few minutes, the entire thing is gone."
     ,    
     options: [
       {
@@ -879,7 +879,7 @@ const textNodes = [
   },
   {
     id: 40,
-    text: "Damaged ventricles from an overworked heart capitulate to the onslaught of cheap oils coursing through your veins\n\n." +
+    text: "Damaged ventricles from an overworked heart capitulate to the onslaught of cheap oils coursing through your veins.\n\n" +
         "You draw your last breath."
     ,
     options: [
