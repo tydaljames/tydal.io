@@ -3031,9 +3031,9 @@ input, select, textarea {
 
 	.UIUC-MCS-Tiles article {
 		padding: 4em 3em 2em 3em ;
-		height: 60vh;
-		max-height: 60em;
-		min-height: 50em;
+		height: 40vh;
+		max-height: 40em;
+		min-height: 40em;
 	}
 
 }
@@ -3041,6 +3041,10 @@ input, select, textarea {
 @media screen and (max-width: 980px) {
 
 	.UIUC-MCS-Tiles article {
+		padding: 4em 3em 2em 3em ;
+		height: 70vh;
+		max-height: 70em;
+		min-height: 70em;
 		width: 50% !important;
 	}
 
@@ -3050,7 +3054,7 @@ input, select, textarea {
 
 	.UIUC-MCS-Tiles article {
 		padding: 3em 1.5em 1em 1.5em ;
-		height: 60em;
+		height: 92em;
 		max-height: none;
 		min-height: 0;
 	}
