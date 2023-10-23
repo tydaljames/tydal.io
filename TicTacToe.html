@@ -24,37 +24,31 @@
 							<a href="skills-about.html#contact">About</a>
 						</nav>
 						<nav>
-							<a href="#menu">Options</a>
+							<img src="images/wave.png" id = "waveLogo" alt = "">
 						</nav>
 					</header>
-
-				<!-- Menu -->
-                    <nav id="menu">
-                        <ul class="links">
-                            <li><a href="#textSpeed">Text Speed</a></li>
-
-							<li>
-								<div class="switchBody">
-									<div class="switch">
-										<input name="switch" id="one" type="radio" onclick="setSpeed(10)"/>
-										<label for="one" class="switch__label"></label>
-										<input name="switch" id="two" type="radio" onclick="setSpeed(5)"/>
-										<label for="two" class="switch__label"></label>
-										<input name="switch" id="three" type="radio" checked onclick="setSpeed(-1)"/>
-										<label for="three" class="switch__label" ></label>
-										<div class="switch__indicator"></div>
-									</div>
-								</div>
-							</li>
-						</ul>
-                    </nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="gameBody">
-<!--                            <div class="gameBox">-->
+							<div class="tic-tac-toe-box">
+								<div id="top-section">
+									<button id="resetButton">Reset</button>
 
-<!--                              <div id="text">Text</div>-->
+									<div id="scoreboard">
+										<div class="score-item">
+											<strong>Wins:</strong> <span id="win-count">0</span>
+										</div>
+										<div class="score-item">
+											<strong>Losses:</strong> <span id="loss-count">0</span>
+										</div>
+										<div class="score-item">
+											<strong>Ties:</strong> <span id="tie-count">0</span>
+										</div>
+									</div>
+
+								</div>
+
                               <div id="option-buttons" class="tic-tac-toe-buttons">
                                 <button class="tic-tac-toe-btn"></button>
                                 <button class="tic-tac-toe-btn"></button>
@@ -66,7 +60,7 @@
 								<button class="tic-tac-toe-btn"></button>
 								<button class="tic-tac-toe-btn"></button>
 							  </div>
-<!--                            </div>-->
+                            </div>
                         </div>
 					</div>
 

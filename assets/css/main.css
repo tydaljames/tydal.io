@@ -138,6 +138,62 @@
 	box-sizing: border-box;  /* ensures padding and border are included in the total width and height */
 }
 
+#resetButton {
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	/*margin-left: 200vw; !* Add some space to the left of the Reset button *!*/
+
+}
+
+#resetButton:hover {
+	background-color: #2980b9;
+}
+
+#resetButton:disabled {
+	background-color: #7f8c8d;
+	cursor: not-allowed;
+}
+
+
+#top-section {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px; /* Add some space before the Tic-Tac-Toe buttons */
+}
+
+#scoreboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*margin-right: 200vw;*/
+}
+
+#scoreboard > div:not(:first-child) {
+	display: flex;
+	gap: 20px; /* Spacing between Wins, Losses, and Ties */
+}
+
+.score-item {
+	display: flex;
+	align-items: center;
+	gap: 5px; /* Spacing between label and count */
+}
+
+.score-item {
+	display: flex;
+	align-items: center;
+	gap: 5px; /* Spacing between label and count */
+}
+
+
 
 
   

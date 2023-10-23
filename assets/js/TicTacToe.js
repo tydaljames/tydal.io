@@ -6,14 +6,49 @@ buttons.forEach(function(button) {
     button.addEventListener('click', playerMove);
 });
 
+document.getElementById('resetButton').addEventListener('click', function() {
+    // Logic to start a new game goes here
+    // This could involve resetting game variables, re-enabling buttons, etc.
+
+    // As an example, if you have a function called `startNewGame`:
+    startNewGame();
+});
+
+function startNewGame() {
+    // Logic to start the game from scratch
+    // Re-enable all the buttons if they were previously disabled
+    buttons.forEach(function(button) {
+        button.addEventListener('click', playerMove);
+        button.disabled = false; // Ensure buttons are clickable
+    });
+    resetBoard();
+
+    if(Math.random() >= 0.5) selectRandomCorner(buttons).textContent = 'O';
+}
+
+function incrementIntegerText(elementId, incrementAmount) {
+    let element = document.getElementById(elementId);
+
+    let currentValue = parseInt(element.textContent, 10);
+    element.textContent = currentValue + incrementAmount;
+}
+
+function selectRandomCorner(buttons) {
+    const indices = [0, 2, 6, 8];
+    const randomIndex = indices[Math.floor(Math.random() * 4)];
+    const corner = buttons[randomIndex];
+    // console.log(selectedNumber);
+
+    return corner;
+}
 
 function checkConditions(playerChar) {
     if(checkForWin(playerChar)) {
-        // alert(playerChar + " wins!");
+        incrementIntegerText(playerChar === 'X' ? 'win-count' : 'loss-count', 1);
         disableAllButtons(buttons);
     }
     else if(isBoardFull(buttons)) {
-        // alert("Tie game.");
+        incrementIntegerText('tie-count', 1);
         disableAllButtons(buttons);
     }
 }
@@ -25,7 +60,6 @@ function playerMove(button) {
     checkConditions('X');
     enemyMove(buttons);
 }
-
 
 function enemyMove(buttons) {
     let bestScore = -Infinity;
@@ -42,9 +76,7 @@ function enemyMove(buttons) {
             }
         }
     }
-
     buttons[move].textContent = 'O';
-
     checkConditions('O');
 }
 
